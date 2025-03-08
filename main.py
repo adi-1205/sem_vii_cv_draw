@@ -45,6 +45,8 @@ async def hand_landmark_server(websocket):
         # Send keypoints as JSON data to the browser
         if keypoints:
             await websocket.send(json.dumps(keypoints))
+        else:
+            await websocket.send(json.dumps([]))
 
         await asyncio.sleep(0.016)
 
