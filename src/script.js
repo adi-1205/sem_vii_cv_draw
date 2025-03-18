@@ -72,9 +72,6 @@ socket.onmessage = (event) => {
                 drawCircle('red', x, y, 3, {alpha:isPainting ? 0.2 : 1});
             }
 
-            // if (landmark.hand === 'Left') {
-            //     drawCircle('blue', x, y);
-            // }
         });
     });
     colorManager.createColorOptions();
@@ -86,7 +83,6 @@ socket.onmessage = (event) => {
     ctx.fillText('Stroke', lineHeightRect.x + 5, lineHeightRect.y + 20);
     ctx.font = '24px Arial';
     ctx.fillText(lineHeight, lineHeightRect.x + 12, lineHeightRect.y + 60);
-    // drawPaintPoints(points);
 };
 
 socket.onerror = (error) => {
